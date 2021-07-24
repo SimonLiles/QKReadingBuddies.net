@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 , h2, h3 {
+    color: cadetblue;
+}
+
+/*Define a grid container for the banner*/
+.banner.container {
+    /*Set up grid*/
+    display: grid;
+    grid-template-columns: [left_col] auto [middle_col] auto [right_col] auto;
+    grid-template-rows: [top_row] 33% [middle_row] 33% [bottom_row] 33%;
+    /*Dimensions*/
+    height: 150px;
+    width: auto;
+    /*Background*/
+    background-color: cadetblue;
+    background-image: none;
+    background-blend-mode: multiply;
+    /*Font*/
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/*Grid Item definition for Link in Header Banner*/
+.banner.links.ralign {
+    /*Set up grid item*/
+    grid-column-start: right_col;
+    grid-column-end: span 1;
+    grid-row-start: middle_row;
+    grid-row-end: span 1;
+    /*Alignment*/
+    text-align: right;
+    justify-self: end;
+    align-self: center;
+    /*Font*/
+    font-size: x-large;
+    /*Spacing*/
+    margin: 10px;
+}
+
+/*Grid item for some links in the left column of footer*/
+.banner.links.lcol {
+    /*Set up grid item*/
+    grid-column-start: left_col;
+    grid-column-end: span 1;
+    grid-row-start: top_row;
+    grid-row-end: bottom_row;
+    /*Alignment*/
+    text-align: left;
+    /*Font*/
+    font-size: x-large;
+    /*Spacing*/
+    margin: 10px;
+}
+
+/*Grid Item to hold the logo*/
+.banner.logo {
+    /*Set up grid item*/
+    grid-column: left_col;
+    grid-row: top_row / bottom_row;
+    /*Alignment*/
+    align-self: stretch;
+    /*Fonts*/
+    font-size: 100;
+    /*padding*/
+    margin: 10px;
+}
+
+/*Grid item for some links in the bottom row of footer*/
+.banner.copyright {
+    /*Set up grid item*/
+    grid-column-start: middle_col;
+    grid-column-end: span 1;
+    grid-row-start: bottom_row;
+    grid-row-end: span 1;
+    /*Alignment*/
+    text-align: left;
+    /*Font*/
+    font-size: small;
+    /*Spacing*/
+    margin: 10px;
+}
+
+/*Define style for banner links*/
+.banner.links.button {
+    /*Font*/
+    color: white;
+    /*Spacing*/
+    padding: 10px;
+    margin: 10px;
+    /*size*/
+    width:auto;
+    height: auto;
+    /*Border*/
+    border-style: solid !important;
+    border-width: 1px;
+    border-color: white;
+}
+
+/*Define style for footer links*/
+.banner.links.simple {
+    /*Font*/
+    color: azure;
+    font-size: small;
+    /*Spacing*/
+    padding: 10px;
+    margin: 10px;
+}
+
+/*50px tall, full width spacer*/
+.spacer {
+    margin-top: 50px;
+}
+
+/*Title bar*/
+.title_bar {
+    font-size: 48;
+    /*
+    border-top-style: solid !important;
+    border-top-width: 3px !important;
+    border-top: cadetblue;
+    */
+    border-bottom-style: solid !important;
+    border-bottom-width: 2px !important;
+    border-bottom: cadetblue;
+}
+
+/*Spread sections for home page*/
+
+/*Container for each spread*/
+.spread {
+    /*Set up grid*/
+    display: grid;
+    grid-template-columns: [left_col] auto [middle_col] auto [right_col] auto;
+    grid-template-rows: [top_row] auto [middle_row] 10% [bottom_row] auto;
+    /*Dimensions*/
+    height: 1000px;
+    width: auto;
+    /*background*/
+    /*background-color: cadetblue;*/
+    background-blend-mode: multiply;
+    /*alignment*/
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+/*Descriptive text for a spread*/
+.spread.title {
+    /*Position item within grid.*/
+    grid-column-start: left_col;
+    grid-column-end: span 3;
+    grid-row-start: top_row;
+    grid-row-end: span 1;
+    /*size*/
+    width: auto;
+    height: auto;
+    /*font*/
+    color:white;
+    font-size: 96;
+    text-align: right;
+    /*border: 1px solid plum;*/
+}
+
+/*center button for a spread*/
+.spread.button {
+    /*Position item within grid.*/
+    grid-column-start: middle_col;
+    grid-column-end: right_col;
+    grid-row-start: middle_row;
+    grid-row-end: bottom_row;
+    /*Size*/
+    width: 150px;
+    height: auto;
+    padding: 5px;
+    /*Colors*/
+    border: 1px solid white;
+    /*background-color: cadetblue;*/
+    /*Alignment*/
+    text-align: right;
+    /*Font*/
+    color: white;
+    font-size: x-large;
+}
+
+/*Spread for the volunteer*/
+
+/*For large text fields*/
+input.large {
+    height: 300;
+    width: 600;
+    vertical-align: top;
+    text-align:justify;
+    word-break: break-word;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+    -ms-word-break: break-word;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+input.formButton {
+    /*Size and shape*/
+    height: 50;
+    width: 100;
+    /*Background*/
+    background-color: cadetblue;
+    /*Text*/
+    color: white;
+    font-size: medium;
+}
+
+.alert.small {
+    color: red;
+    font-size: small;
+}
